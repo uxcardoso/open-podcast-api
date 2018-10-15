@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- node
+cache:
+  directories:
+    - node_modules
+script:
+    - npm install -g serverless
+    - npm init -f
+    - npm install --save-dev serverless-wsgi serverless-python-requirements
+    - sls deploy
